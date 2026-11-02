@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enteropia Studio — Architectural systems engineering, cloud infrastructure, AI automation and enterprise software design.">
+    <title>Enteropia — Architectural Systems Studio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP TELEMETRY STRIP -->
+    <div class="top-bar" id="topBar">
+        <div class="top-bar-inner">
+            <div class="top-status">
+                <span class="pulse-indicator"></span>
+                <span>SYSTEM STATUS: OPERATIONAL</span>
+                <span class="divider">/</span>
+                <span id="liveTime">BENGALURU UTC+05:30</span>
+            </div>
+            <div class="top-specs">
+                <span>ZERO-TRUST COMPLIANT</span>
+                <span class="divider">/</span>
+                <span>ISO 27001 & SOC 2 TYPE II CERTIFIED</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <a class="logo" href="#home">
+            <span class="logo-mark">E</span>
+            <span class="logo-text">enteropia<span class="registered">®</span></span>
+            <span class="logo-sub">STUDIO</span>
+        </a>
+
+        <button class="menu-button" id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navigation">
+            <span class="menu-icon-line"></span>
+            <span class="menu-icon-line"></span>
+        </button>
+
+        <nav id="navigation" class="nav-menu">
+            <a href="#about" class="nav-link"><span>01</span> Manifesto</a>
+            <a href="#services" class="nav-link"><span>02</span> Capabilities</a>
+            <a href="#solutions" class="nav-link"><span>03</span> Platforms</a>
+            <a href="#work" class="nav-link"><span>04</span> Selected Work</a>
+            <a href="#standards" class="nav-link"><span>05</span> Standards</a>
+            <a href="#testimonials" class="nav-link"><span>06</span> Perspectives</a>
+            <a href="#careers" class="nav-link"><span>07</span> Studio</a>
+            <a class="nav-cta" href="#contact">Initiate Brief <span>↗</span></a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <div class="hero-content reveal">
+                    <div class="hero-badge">
+                        <span class="badge-tag">ENGINEERING MONOGRAPH 2026</span>
+                        <span class="badge-sep">|</span>
+                        <span class="badge-loc">BENGALURU, INDIA</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Engineered with <span class="title-serif">precision.</span><br>
+                        Built to <span class="highlight-word">endure<span class="period">.</span></span>
+                    </h1>
+
+                    <p class="hero-lead">
+                        Enteropia Studio combines architectural systems rigor with modern product craft. We engineer high-throughput cloud foundations, production AI pipelines, and mission-critical enterprise software designed for continuous scale.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#services" class="btn-primary">
+                            <span>Explore Capabilities</span>
+                            <span class="btn-arrow">↗</span>
+                        </a>
+                        <a href="#work" class="btn-secondary">
+                            <span>View Case Studies</span>
+                            <span class="btn-arrow">↓</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-telemetry">
+                        <div class="telemetry-item">
+                            <span class="tele-val">99.98%</span>
+                            <span class="tele-lbl">UPTIME RECORD</span>
+                        </div>
+                        <div class="telemetry-item">
+                            <span class="tele-val">&lt; 18ms</span>
+                            <span class="tele-lbl">MEDIAN LATENCY</span>
+                        </div>
+                        <div class="telemetry-item">
+                            <span class="tele-val">45+</span>
+                            <span class="tele-lbl">ENTERPRISE BUILDS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal" id="heroVisualWrap">
+                    <div class="visual-canvas-card">
+                        <div class="canvas-header">
+                            <div class="canvas-title">
+                                <span class="canvas-dot"></span>
+                                <span>KINETIC ARCHITECTURE ENGINE · V2.4</span>
+                            </div>
+                            <span class="canvas-coord" id="canvasCoordinates">X: 000 | Y: 000</span>
+                        </div>
+
+                        <!-- INTERACTIVE GEOMETRIC CANVAS -->
+                        <canvas id="heroStudioCanvas" class="hero-studio-canvas" aria-label="Interactive geometric architectural model with dynamic mouse physics"></canvas>
+
+                        <div class="canvas-overlay-badges">
+                            <div class="glass-pill pill-top">
+                                <span class="pill-icon">✦</span>
+                                <div class="pill-text">
+                                    <strong>Distributed Core</strong>
+                                    <small>Zero-Downtime Mesh</small>
+                                </div>
+                            </div>
+                            <div class="glass-pill pill-bottom">
+                                <span class="pill-icon">✳</span>
+                                <div class="pill-text">
+                                    <strong>Deterministic Ops</strong>
+                                    <small>Automated CI/CD Telemetry</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="canvas-footer">
+                            <span>INTERACT: MOVE CURSOR TO DEFLECT NODES</span>
+                            <span>PRECISION · POWER · PROGRESS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-footer-bar">
+                <span class="footer-tag">SCROLL TO DISCOVER ARCHITECTURE</span>
+                <span class="footer-line"></span>
+                <span class="footer-index">01 — 07 SECTIONS</span>
+            </div>
+        </section>
+
+        <!-- TICKER MARQUEE -->
+        <section class="ticker-strip" aria-label="Core Competencies Marquee">
+            <div class="ticker-track">
+                <span>DISTRIBUTED SYSTEMS</span><span class="bullet">✦</span>
+                <span>EVENT-DRIVEN MICROSERVICES</span><span class="bullet">✦</span>
+                <span>CLOUD-NATIVE KUBERNETES</span><span class="bullet">✦</span>
+                <span>PRODUCTION ML PIPELINES</span><span class="bullet">✦</span>
+                <span>ZERO-TRUST IDENTITY MESH</span><span class="bullet">✦</span>
+                <span>DATA LAKEHOUSE ARCHITECTURE</span><span class="bullet">✦</span>
+                <span>DISTRIBUTED SYSTEMS</span><span class="bullet">✦</span>
+                <span>EVENT-DRIVEN MICROSERVICES</span><span class="bullet">✦</span>
+                <span>CLOUD-NATIVE KUBERNETES</span><span class="bullet">✦</span>
+                <span>PRODUCTION ML PIPELINES</span><span class="bullet">✦</span>
+                <span>ZERO-TRUST IDENTITY MESH</span><span class="bullet">✦</span>
+                <span>DATA LAKEHOUSE ARCHITECTURE</span><span class="bullet">✦</span>
+            </div>
+        </section>
+
+        <!-- MANIFESTO / ABOUT -->
+        <section class="manifesto section-pad" id="about">
+            <div class="container">
+                <div class="section-kicker reveal">
+                    <span class="kicker-num">01</span>
+                    <span class="kicker-title">STUDIO MANIFESTO & PRINCIPLES</span>
+                </div>
+
+                <div class="manifesto-grid">
+                    <div class="manifesto-headline reveal">
+                        <h2>
+                            Software should be as enduring as <em>fine architecture.</em>
+                        </h2>
+                        <p class="manifesto-lead">
+                            Most enterprise software deteriorates under scale because it is assembled from brittle shortcuts. At Enteropia, we design digital foundations with strict domain boundaries, verifiable performance SLAs, and unwavering technical integrity.
+                        </p>
+                        <div class="manifesto-cite">
+                            <strong>ENTERPIA SYSTEMS MONOGRAPH</strong>
+                            <span>Headquarters: Basavanagudi, Bengaluru, Karnataka</span>
+                        </div>
+                    </div>
+
+                    <div class="manifesto-pillars">
+                        <article class="pillar-card reveal">
+                            <span class="pillar-idx">01</span>
+                            <h3>Systematic Decoupling</h3>
+                            <p>We enforce domain-driven isolation across services. Microservices scale independently, fail gracefully, and deploy without systemic lock-in.</p>
+                            <span class="pillar-tag">ARCHITECTURE DISCIPLINE</span>
+                        </article>
+
+                        <article class="pillar-card reveal">
+                            <span class="pillar-idx">02</span>
+                            <h3>Telemetry-Driven Observability</h3>
+                            <p>Every critical path emits structured tracing, metric histograms, and real-time alerts to guarantee predictable performance under peak load.</p>
+                            <span class="pillar-tag">OPERATIONAL CLARITY</span>
+                        </article>
+
+                        <article class="pillar-card reveal">
+                            <span class="pillar-idx">03</span>
+                            <h3>Zero-Trust Perimeter</h3>
+                            <p>Identity verification, mutual TLS encryption, and role-based cryptographic access are engineered directly into the network fabric from day one.</p>
+                            <span class="pillar-tag">SECURITY HARDENING</span>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAPABILITIES / SERVICES -->
+        <section class="capabilities section-pad bg-contrast" id="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div>
+                        <div class="section-kicker">
+                            <span class="kicker-num">02</span>
+                            <span class="kicker-title">CORE CAPABILITIES</span>
+                        </div>
+                        <h2 class="section-heading">Disciplined engineering for<br><span>complex business domains.</span></h2>
+                    </div>
+                    <p class="section-subtext">
+                        We partner with ambitious enterprises and engineering leaders to design, build, and operate mission-critical platforms.
+                    </p>
+                </div>
+
+                <div class="capability-cards">
+                    <!-- 01 SOFTWARE -->
+                    <article class="cap-card reveal" data-cap-id="software">
+                        <div class="cap-top">
+                            <span class="cap-number">01</span>
+                            <span class="cap-indicator">✦</span>
+                        </div>
+                        <h3 class="cap-title">Software Engineering & Microservices</h3>
+                        <p class="cap-desc">
+                            High-concurrency web applications, reactive APIs (GraphQL & REST), and resilient event streaming engines engineered around domain workflows.
+                        </p>
+                        <div class="cap-tags">
+                            <span>TypeScript</span>
+                            <span>Node / Go</span>
+                            <span>React / Next.js</span>
+                            <span>PostgreSQL</span>
+                            <span>Kafka</span>
+                        </div>
+                        <button class="cap-inspect-btn" data-open-drawer="software" aria-label="Inspect Software Engineering Blueprint">
+                            <span>Inspect Blueprint</span>
+                            <span class="btn-arrow">↗</span>
+                        </button>
+                    </article>
+
+                    <!-- 02 CLOUD & DEVOPS -->
+                    <article class="cap-card reveal" data-cap-id="cloud">
+                        <div class="cap-top">
+                            <span class="cap-number">02</span>
+                            <span class="cap-indicator">✳</span>
+                        </div>
+                        <h3 class="cap-title">Cloud Infrastructure & Kubernetes DevOps</h3>
+                        <p class="cap-desc">
+                            Automated multi-cloud foundations on AWS & GCP, Infrastructure as Code, container orchestration, and zero-downtime deployment pipelines.
+                        </p>
+                        <div class="cap-tags">
+                            <span>AWS & GCP</span>
+                            <span>Kubernetes / EKS</span>
+                            <span>Terraform</span>
+                            <span>Docker</span>
+                            <span>ArgoCD</span>
+                        </div>
+                        <button class="cap-inspect-btn" data-open-drawer="cloud" aria-label="Inspect Cloud Infrastructure Blueprint">
+                            <span>Inspect Blueprint</span>
+                            <span class="btn-arrow">↗</span>
+                        </button>
+                    </article>
+
+                    <!-- 03 AI & ML -->
+                    <article class="cap-card reveal" data-cap-id="ai">
+                        <div class="cap-top">
+                            <span class="cap-number">03</span>
+                            <span class="cap-indicator">◎</span>
+                        </div>
+                        <h3 class="cap-title">AI Automation & Time-Series Analytics</h3>
+                        <p class="cap-desc">
+                            Production-grade machine learning workflows, predictive replenishment forecasting, real-time anomaly detection, and embedded inference.
+                        </p>
+                        <div class="cap-tags">
+                            <span>Python / PyTorch</span>
+                            <span>FastAPI</span>
+                            <span>Time-Series ML</span>
+                            <span>vLLM</span>
+                            <span>Feature Store</span>
+                        </div>
+                        <button class="cap-inspect-btn" data-open-drawer="ai" aria-label="Inspect AI Automation Blueprint">
+                            <span>Inspect Blueprint</span>
+                            <span class="btn-arrow">↗</span>
+                        </button>
+                    </article>
+
+                    <!-- 04 ZERO-TRUST SECURITY -->
+                    <article class="cap-card reveal" data-cap-id="security">
+                        <div class="cap-top">
+                            <span class="cap-number">04</span>
+                            <span class="cap-indicator">◈</span>
+                        </div>
+                        <h3 class="cap-title">Zero-Trust Cybersecurity & Compliance</h3>
+                        <p class="cap-desc">
+                            Identity federation, mutual TLS service mesh, automated continuous vulnerability auditing, and compliance governance aligned to ISO 27001 & SOC 2.
+                        </p>
+                        <div class="cap-tags">
+                            <span>mTLS Mesh</span>
+                            <span>OAuth2 / OIDC</span>
+                            <span>IAM & RBAC</span>
+                            <span>SOC 2 Type II</span>
+                            <span>Vault HSM</span>
+                        </div>
+                        <button class="cap-inspect-btn" data-open-drawer="security" aria-label="Inspect Security Blueprint">
+                            <span>Inspect Blueprint</span>
+                            <span class="btn-arrow">↗</span>
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PURPOSE-BUILT PLATFORMS -->
+        <section class="platforms section-pad" id="solutions">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div>
+                        <div class="section-kicker">
+                            <span class="kicker-num">03</span>
+                            <span class="kicker-title">ENTERPRISE PLATFORMS</span>
+                        </div>
+                        <h2 class="section-heading">Purpose-built platforms solving<br><span>critical operational friction.</span></h2>
+                    </div>
+                    <p class="section-subtext">
+                        Proprietary platforms engineered by Enteropia to power core operations in agriculture, healthcare, and enterprise intelligence.
+                    </p>
+                </div>
+
+                <div class="platform-grid">
+                    <!-- PLATFORM 1: AGRO-HUB -->
+                    <article class="platform-card reveal">
+                        <div class="plat-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=85" alt="Agro-Hub modern logistics supply chain center" class="plat-img" loading="lazy">
+                            <span class="plat-badge">AGRI-SUPPLY CHAIN</span>
+                        </div>
+                        <div class="plat-body">
+                            <div class="plat-meta">
+                                <span>PLATFORM 01</span>
+                                <span class="status-live">● ACTIVE DEPLOYMENT</span>
+                            </div>
+                            <h3>Agro-Hub Distributed Logistics Engine</h3>
+                            <p>
+                                An end-to-end agri-commerce orchestration network connecting regional farm collectives with urban distribution terminals, cutting harvest spoilage by 35%.
+                            </p>
+                            <div class="plat-metrics-row">
+                                <div class="metric-pill">
+                                    <strong>35%</strong>
+                                    <small>Transit Turnaround Gain</small>
+                                </div>
+                                <div class="metric-pill">
+                                    <strong>₹42Cr+</strong>
+                                    <small>Gross Harvest Settled</small>
+                                </div>
+                            </div>
+                            <button class="plat-action-btn" data-open-drawer="agro">
+                                <span>Inspect Architecture Monograph</span>
+                                <span>↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- PLATFORM 2: MAATRI SURAKSHA -->
+                    <article class="platform-card reveal">
+                        <div class="plat-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85" alt="Maatri Suraksha medical telemetry and health informatics" class="plat-img" loading="lazy">
+                            <span class="plat-badge">PREVENTATIVE HEALTHCARE</span>
+                        </div>
+                        <div class="plat-body">
+                            <div class="plat-meta">
+                                <span>PLATFORM 02</span>
+                                <span class="status-live">● ACTIVE DEPLOYMENT</span>
+                            </div>
+                            <h3>Maatri Suraksha Maternal Telemetry System</h3>
+                            <p>
+                                Cloud-synced preventative telemetry connecting grassroots health officers with regional hospitals for immediate risk-factor triage and prenatal care monitoring.
+                            </p>
+                            <div class="plat-metrics-row">
+                                <div class="metric-pill">
+                                    <strong>98.4%</strong>
+                                    <small>On-Time Triage Rate</small>
+                                </div>
+                                <div class="metric-pill">
+                                    <strong>120,000+</strong>
+                                    <small>Mothers Monitored</small>
+                                </div>
+                            </div>
+                            <button class="plat-action-btn" data-open-drawer="maatri">
+                                <span>Inspect Architecture Monograph</span>
+                                <span>↗</span>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- PLATFORM 3: DEMAND FORECASTING -->
+                    <article class="platform-card reveal">
+                        <div class="plat-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85" alt="Enterprise Demand Forecasting analytics and visualization" class="plat-img" loading="lazy">
+                            <span class="plat-badge">ENTERPRISE INTELLIGENCE</span>
+                        </div>
+                        <div class="plat-body">
+                            <div class="plat-meta">
+                                <span>PLATFORM 03</span>
+                                <span class="status-live">● ACTIVE DEPLOYMENT</span>
+                            </div>
+                            <h3>Time-Series Multi-Tier Demand Engine</h3>
+                            <p>
+                                Automated deep-learning inventory replenishment prediction engine modeling seasonality, supplier lead latencies, and regional fulfillment constraints.
+                            </p>
+                            <div class="plat-metrics-row">
+                                <div class="metric-pill">
+                                    <strong>22.6%</strong>
+                                    <small>Stockout Reduction</small>
+                                </div>
+                                <div class="metric-pill">
+                                    <strong>18.5%</strong>
+                                    <small>Reclaimed Working Capital</small>
+                                </div>
+                            </div>
+                            <button class="plat-action-btn" data-open-drawer="demand">
+                                <span>Inspect Architecture Monograph</span>
+                                <span>↗</span>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SELECTED WORK / CASE STUDIES -->
+        <section class="work section-pad bg-contrast" id="work">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div>
+                        <div class="section-kicker">
+                            <span class="kicker-num">04</span>
+                            <span class="kicker-title">CURATED CASE STUDIES</span>
+                        </div>
+                        <h2 class="section-heading">Systems engineered for<br><span>uncompromising impact.</span></h2>
+                    </div>
+                    <div class="work-filter-bar">
+                        <button class="filter-btn active" data-filter="all">All Systems</button>
+                        <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+                        <button class="filter-btn" data-filter="ai">AI / Data</button>
+                        <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+                    </div>
+                </div>
+
+                <div class="work-grid" id="workGrid">
+                    <!-- CASE STUDY 1 -->
+                    <article class="work-card reveal" data-category="enterprise">
+                        <div class="work-card-media">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=85" alt="Agro-Hub case study preview" class="work-card-img" loading="lazy">
+                            <span class="work-card-badge">ENTERPRISE LOGISTICS</span>
+                            <div class="work-hover-overlay">
+                                <span>Inspect Case Study ↗</span>
+                            </div>
+                        </div>
+                        <div class="work-card-info">
+                            <div class="work-card-header">
+                                <span class="work-num">01 / LOGISTICS</span>
+                                <span class="work-stat">35% Efficiency Gain</span>
+                            </div>
+                            <h3>Agro-Hub Multi-Node Logistics Network</h3>
+                            <p>Real-time distributed routing, automated weighment reconciliation, and farmer payout orchestration across 14 rural mandis.</p>
+                            <button class="work-read-btn" data-open-drawer="agro">Explore Technical Breakdown ↗</button>
+                        </div>
+                    </article>
+
+                    <!-- CASE STUDY 2 -->
+                    <article class="work-card reveal" data-category="enterprise">
+                        <div class="work-card-media">
+                            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85" alt="Maatri Suraksha case study preview" class="work-card-img" loading="lazy">
+                            <span class="work-card-badge">HEALTHCARE PLATFORM</span>
+                            <div class="work-hover-overlay">
+                                <span>Inspect Case Study ↗</span>
+                            </div>
+                        </div>
+                        <div class="work-card-info">
+                            <div class="work-card-header">
+                                <span class="work-num">02 / PUBLIC HEALTH</span>
+                                <span class="work-stat">98.4% Triage SLA</span>
+                            </div>
+                            <h3>Maatri Suraksha Maternal Telemetry Portal</h3>
+                            <p>End-to-end encrypted clinical database, offline-first mobile synchronization, and emergency doctor dispatch telemetry.</p>
+                            <button class="work-read-btn" data-open-drawer="maatri">Explore Technical Breakdown ↗</button>
+                        </div>
+                    </article>
+
+                    <!-- CASE STUDY 3 -->
+                    <article class="work-card reveal" data-category="ai">
+                        <div class="work-card-media">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85" alt="Demand Forecasting case study preview" class="work-card-img" loading="lazy">
+                            <span class="work-card-badge">AI / TIME-SERIES</span>
+                            <div class="work-hover-overlay">
+                                <span>Inspect Case Study ↗</span>
+                            </div>
+                        </div>
+                        <div class="work-card-info">
+                            <div class="work-card-header">
+                                <span class="work-num">03 / PREDICTIVE AI</span>
+                                <span class="work-stat">22% Stockout Drop</span>
+                            </div>
+                            <h3>Multi-Echelon Replenishment Forecasting</h3>
+                            <p>Deep learning models trained on 5 years of retail SKU velocities to automate warehouse inventory purchase orders.</p>
+                            <button class="work-read-btn" data-open-drawer="demand">Explore Technical Breakdown ↗</button>
+                        </div>
+                    </article>
+
+                    <!-- CASE STUDY 4 -->
+                    <article class="work-card reveal" data-category="cloud">
+                        <div class="work-card-media">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=85" alt="Zero Trust Mesh case study preview" class="work-card-img" loading="lazy">
+                            <span class="work-card-badge">CLOUD & DEVOPS</span>
+                            <div class="work-hover-overlay">
+                                <span>Inspect Case Study ↗</span>
+                            </div>
+                        </div>
+                        <div class="work-card-info">
+                            <div class="work-card-header">
+                                <span class="work-num">04 / ZERO-TRUST</span>
+                                <span class="work-stat">99.99% Availability</span>
+                            </div>
+                            <h3>Multi-Region Kubernetes Cloud Mesh</h3>
+                            <p>Automated Terraform provisioning, Istio service mesh, mutual TLS cryptographic tunnels, and real-time distributed tracing.</p>
+                            <button class="work-read-btn" data-open-drawer="security">Explore Technical Breakdown ↗</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- VERIFIED STANDARDS (ANIMATED METRICS) -->
+        <section class="standards section-pad" id="standards">
+            <div class="container">
+                <div class="section-kicker reveal">
+                    <span class="kicker-num">05</span>
+                    <span class="kicker-title">VERIFIED OPERATIONAL STANDARDS</span>
+                </div>
+
+                <div class="standards-content reveal">
+                    <div class="standards-head">
+                        <h2>Predictable performance measured by <em>objective telemetry.</em></h2>
+                        <p>We do not rely on subjective claims. Every deployment is benchmarked against strict engineering SLAs.</p>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-num">
+                                <span class="counter" data-target="99.98" data-decimals="2">0</span>%
+                            </div>
+                            <span class="metric-label">Historical Production SLA</span>
+                            <p class="metric-detail">Maintained across high-concurrency client infrastructure with automated failover.</p>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-num">
+                                <span class="counter" data-target="45" data-decimals="0">0</span>+
+                            </div>
+                            <span class="metric-label">Enterprise Platforms Deployed</span>
+                            <p class="metric-detail">Live enterprise systems supporting banking, logistics, retail, and public sector.</p>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-num">
+                                <span class="counter" data-target="18" data-decimals="0">0</span>ms
+                            </div>
+                            <span class="metric-label">Median API Gateway Latency</span>
+                            <p class="metric-detail">Sub-millisecond Redis caching layers and edge CDN proxying.</p>
+                        </div>
+
+                        <div class="metric-card">
+                            <div class="metric-num">24/7</div>
+                            <span class="metric-label">Continuous Monitoring</span>
+                            <p class="metric-detail">Automated Prometheus alerting and continuous synthetic availability health checks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENT PERSPECTIVES / TESTIMONIALS -->
+        <section class="testimonials section-pad bg-contrast" id="testimonials">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div>
+                        <div class="section-kicker">
+                            <span class="kicker-num">06</span>
+                            <span class="kicker-title">EXECUTIVE PERSPECTIVES</span>
+                        </div>
+                        <h2 class="section-heading">Trusted by technology leaders<br><span>building mission-critical systems.</span></h2>
+                    </div>
+                    <p class="section-subtext">
+                        Feedback from CTOs, Engineering VPs, and institutional leaders partnering with Enteropia Studio.
+                    </p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testi-card reveal">
+                        <div class="testi-stars">★★★★★</div>
+                        <blockquote class="testi-quote">
+                            "Enteropia approached our supply chain architecture with a level of rigor that set a new benchmark for external partners. Their domain modeling eliminated data race conditions that our internal team had grappled with for quarters."
+                        </blockquote>
+                        <div class="testi-author">
+                            <div class="author-avatar">RK</div>
+                            <div>
+                                <strong>Rajesh Kulkarni</strong>
+                                <span>Head of Systems Architecture, SupplyFirst India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-card reveal">
+                        <div class="testi-stars">★★★★★</div>
+                        <blockquote class="testi-quote">
+                            "The Maatri Suraksha maternal telemetry portal required zero-trust security alongside flawless offline-first mobile sync. Enteropia engineered a solution that over 120,000 mothers and field workers count on daily without interruption."
+                        </blockquote>
+                        <div class="testi-author">
+                            <div class="author-avatar">SM</div>
+                            <div>
+                                <strong>Dr. Shalini Menon</strong>
+                                <span>Director of Health Technology, CarePoint Consortium</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-card reveal">
+                        <div class="testi-stars">★★★★★</div>
+                        <blockquote class="testi-quote">
+                            "From automated Kubernetes cluster provisioning to sub-20ms database queries, Enteropia delivered on every single SLA. They do not just write code; they build durable digital capital for your enterprise."
+                        </blockquote>
+                        <div class="testi-author">
+                            <div class="author-avatar">VA</div>
+                            <div>
+                                <strong>Vikram Anand</strong>
+                                <span>VP of Product Engineering, RetailNex Technologies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STUDIO CULTURE / CAREERS -->
+        <section class="careers section-pad" id="careers">
+            <div class="container">
+                <div class="careers-box reveal">
+                    <div class="careers-text">
+                        <div class="section-kicker">
+                            <span class="kicker-num">07</span>
+                            <span class="kicker-title">STUDIO OPPORTUNITIES</span>
+                        </div>
+                        <h2>Craft software that solves<br><span>substantive engineering problems.</span></h2>
+                        <p>
+                            We are an engineering-led collective of distributed systems architects, full-stack builders, and cloud specialists based in Basavanagudi, Bengaluru. We care deeply about clean code, continuous learning, and intellectual honesty.
+                        </p>
+                        
+                        <div class="roles-list">
+                            <div class="role-item">
+                                <div>
+                                    <strong>Staff Frontend Architect</strong>
+                                    <small>TypeScript · Web Performance · Design Systems · Canvas</small>
+                                </div>
+                                <button class="role-apply-btn" data-career-role="Staff Frontend Architect">
+                                    <span>Express Interest</span>
+                                    <span>↗</span>
+                                </button>
+                            </div>
+
+                            <div class="role-item">
+                                <div>
+                                    <strong>Senior Cloud & DevOps Engineer</strong>
+                                    <small>Kubernetes · Terraform · AWS / GCP · Service Mesh · Istio</small>
+                                </div>
+                                <button class="role-apply-btn" data-career-role="Senior Cloud & DevOps Engineer">
+                                    <span>Express Interest</span>
+                                    <span>↗</span>
+                                </button>
+                            </div>
+
+                            <div class="role-item">
+                                <div>
+                                    <strong>Distributed Systems / Go Backend Lead</strong>
+                                    <small>Go / Rust · Event Streaming · Kafka · High-Concurrency</small>
+                                </div>
+                                <button class="role-apply-btn" data-career-role="Distributed Systems Backend Lead">
+                                    <span>Express Interest</span>
+                                    <span>↗</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="careers-visual">
+                        <div class="culture-pill-card">
+                            <div class="culture-badge">ENTERPIA CULTURE CODE</div>
+                            <ul>
+                                <li><span>01</span> Zero Bureaucracy, High Agency</li>
+                                <li><span>02</span> Clean Architecture & Test Coverage</li>
+                                <li><span>03</span> Open Source & Continuous Research</li>
+                                <li><span>04</span> Competitive Compensation & Equity</li>
+                            </ul>
+                            <div class="culture-footer">
+                                <span>JOIN OUR BENGALURU STUDIO</span>
+                                <a href="#contact" class="btn-primary full-width">Connect with our Lead ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INITIATE BRIEF / CONTACT -->
+        <section class="contact section-pad bg-contrast" id="contact">
+            <div class="container">
+                <div class="contact-wrap">
+                    <div class="contact-info reveal">
+                        <div class="section-kicker">
+                            <span class="kicker-num">INITIATE ENGAGEMENT</span>
+                            <span class="kicker-title">CONTACT OUR ARCHITECTS</span>
+                        </div>
+                        <h2>Let's build your enterprise's<br><span>next enduring foundation.</span></h2>
+                        <p>
+                            Whether you require a complete platform architecture, a cloud migration roadmap, or a mission-critical AI automation pipeline, we look forward to the conversation.
+                        </p>
+
+                        <div class="contact-details">
+                            <div class="contact-detail-row">
+                                <span class="detail-label">STUDIO DIRECTORY</span>
+                                <a href="mailto:architects@enteropia.com" class="detail-link">architects@enteropia.com ↗</a>
+                            </div>
+                            <div class="contact-detail-row">
+                                <span class="detail-label">HEADQUARTERS</span>
+                                <address class="detail-address">
+                                    Enteropia LLP, 4th Block, Basavanagudi,<br>
+                                    Bengaluru, Karnataka 560004, India
+                                </address>
+                            </div>
+                            <div class="contact-detail-row">
+                                <span class="detail-label">ENGAGEMENT MODEL</span>
+                                <span class="detail-text">Dedicated Architecture Squads & Bespoke Enterprise Contracts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card reveal">
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <h3 class="form-title">Initiate Technical Brief</h3>
+                            <p class="form-subtitle">Share your operational objectives to begin an architectural consultation.</p>
+
+                            <div class="form-group">
+                                <label for="contactName">Your Full Name <span class="req">*</span></label>
+                                <input type="text" id="contactName" placeholder="e.g. Anand Sharma" required minlength="2">
+                                <span class="field-error" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactEmail">Work Email Address <span class="req">*</span></label>
+                                <input type="email" id="contactEmail" placeholder="anand@enterprise.com" required>
+                                <span class="field-error" id="emailError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactDomain">Primary Area of Interest</label>
+                                <select id="contactDomain">
+                                    <option value="Enterprise Architecture & Microservices">Enterprise Architecture & Microservices</option>
+                                    <option value="Cloud Modernization & Kubernetes">Cloud Modernization & Kubernetes</option>
+                                    <option value="Production AI & Time-Series Analytics">Production AI & Time-Series Analytics</option>
+                                    <option value="Zero-Trust Cybersecurity & Audit">Zero-Trust Cybersecurity & Audit</option>
+                                    <option value="Careers / Studio Fellowship">Careers / Studio Fellowship</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMessage">Project Scope or Architectural Challenge <span class="req">*</span></label>
+                                <textarea id="contactMessage" rows="4" placeholder="Briefly summarize your systems roadmap or technical constraints..." required minlength="10"></textarea>
+                                <span class="field-error" id="messageError"></span>
+                            </div>
+
+                            <button type="submit" class="btn-primary full-width" id="contactSubmit">
+                                <span>Transmit Brief</span>
+                                <span class="btn-arrow">↗</span>
+                            </button>
+
+                            <div id="formStatus" class="form-status-box" role="status" aria-live="polite"></div>
+                            <p class="form-disclaimer">Frontend Demonstration: Brief submissions are safely persisted to your browser session.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SLIDE-OUT EDITORIAL ARCHITECTURAL DRAWER -->
+    <div class="editorial-drawer-backdrop" id="editorialDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+        <div class="editorial-drawer-container">
+            <header class="drawer-header">
+                <div>
+                    <span class="drawer-kicker" id="drawerKicker">ARCHITECTURE SPECIFICATION</span>
+                    <h2 class="drawer-title" id="drawerTitle">Software Engineering Blueprint</h2>
+                </div>
+                <button class="drawer-close-btn" id="drawerClose" aria-label="Close architecture drawer">✕</button>
+            </header>
+
+            <div class="drawer-meta-bar" id="drawerMeta">
+                <!-- Dynamically populated -->
+            </div>
+
+            <div class="drawer-body" id="drawerContent">
+                <!-- Dynamically populated -->
+            </div>
+
+            <footer class="drawer-footer">
+                <a href="#contact" class="btn-primary" id="drawerCta">
+                    <span>Initiate Technical Discussion</span>
+                    <span>↗</span>
+                </a>
+                <button class="btn-secondary" id="drawerDismiss">Close Blueprint</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand-col">
+                <a class="logo" href="#home">
+                    <span class="logo-mark">E</span>
+                    <span class="logo-text">enteropia<span class="registered">®</span></span>
+                    <span class="logo-sub">STUDIO</span>
+                </a>
+                <p class="footer-desc">
+                    Architectural systems engineering, cloud foundations, and production intelligence. Built in Bengaluru for global enterprises.
+                </p>
+                <div class="footer-cert-badges">
+                    <span>ISO/IEC 27001</span>
+                    <span>SOC 2 TYPE II</span>
+                    <span>WCAG 2.1 AA</span>
+                </div>
+            </div>
+
+            <div class="footer-links-col">
+                <span class="footer-col-title">NAVIGATION</span>
+                <a href="#about">Manifesto</a>
+                <a href="#services">Capabilities</a>
+                <a href="#solutions">Platforms</a>
+                <a href="#work">Case Studies</a>
+                <a href="#standards">Standards</a>
+            </div>
+
+            <div class="footer-links-col">
+                <span class="footer-col-title">PLATFORMS</span>
+                <a href="#solutions">Agro-Hub Logistics</a>
+                <a href="#solutions">Maatri Suraksha Health</a>
+                <a href="#solutions">Demand Forecasting AI</a>
+                <a href="#services">Zero-Trust Cloud Mesh</a>
+            </div>
+
+            <div class="footer-links-col">
+                <span class="footer-col-title">HEADQUARTERS</span>
+                <address class="footer-address">
+                    4th Block, Basavanagudi,<br>
+                    Bengaluru, Karnataka<br>
+                    560004, India<br>
+                    <a href="mailto:architects@enteropia.com">architects@enteropia.com</a>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <div class="container footer-bottom-inner">
+                <span>© <span id="currentYear">2026</span> Enteropia LLP. All rights reserved. Architectural Studio Edition.</span>
+                <div class="footer-legal">
+                    <span>Confidentiality & Privacy</span>
+                    <span>·</span>
+                    <span>Security Telemetry</span>
+                    <span>·</span>
+                    <a href="#home">Back to Top ↑</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NEXORA — Autonomous Cloud & AI Intelligence Platform for Enterprise Scale.">
+    <title>NEXORA — Autonomous Cloud & AI Intelligence Platform</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cyber-glow"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <a href="#home" class="logo">
+            <span class="logo-orb"></span>
+            NEXORA<span>.AI</span>
+        </a>
+
+        <nav id="navLinks" class="nav-links">
+            <a href="#home">Platform</a>
+            <a href="#telemetry">Telemetry Engine</a>
+            <a href="#features">Capabilities</a>
+            <a href="#calculator">ROI Calculator</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#comparison">Matrix</a>
+            <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="ghost-btn" id="loginBtn">Console Sign In</button>
+            <button class="cyan-btn" id="demoBtn">Request Access ↗</button>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+            <span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-left reveal">
+                <div class="cyber-pill">
+                    <span class="beacon"></span>
+                    NEXORA 3.0 RUNTIME · DISTRIBUTED AI TELEMETRY
+                </div>
+
+                <h1>
+                    Autonomous cloud<br>
+                    intelligence for<br>
+                    <span class="neon-text">hyper-scale.</span>
+                </h1>
+
+                <p class="hero-lead">
+                    Automate cloud infrastructure scaling, monitor AI inference latency in real-time,
+                    and eliminate performance bottlenecks across distributed multi-region clusters.
+                </p>
+
+                <div class="hero-cta-group">
+                    <button class="cyan-btn hero-primary-btn" id="heroStartBtn">Deploy Free Sandbox ↗</button>
+                    <a href="#telemetry" class="outline-btn">Live Cluster Telemetry ↓</a>
+                </div>
+
+                <div class="hero-stats-row">
+                    <div class="mini-stat">
+                        <strong>18.4M</strong>
+                        <span>Daily Inferences</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="mini-stat">
+                        <strong>99.99%</strong>
+                        <span>Verified Uptime SLA</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="mini-stat">
+                        <strong>4.2ms</strong>
+                        <span>Edge Model Latency</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-right reveal">
+                <div class="telemetry-mock-terminal">
+                    <div class="terminal-bar">
+                        <div class="term-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="term-title">nexora-cluster-us-east-1 // live telemetry</span>
+                        <span class="term-live">● NOMINAL</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="term-prompt">$</span> nexora init --cluster=enterprise-prod</div>
+                        <div class="terminal-line text-cyan">[INIT] Initializing Neural Load Balancer... [OK]</div>
+                        <div class="terminal-line text-green">[HEALTH] 64/64 Nodes Active · Latency: 4.18ms</div>
+                        <div class="terminal-line text-purple">[SECURITY] Zero-Trust Enclave Active (mTLS 1.3)</div>
+                        <div class="terminal-metrics-box">
+                            <div class="metric-gauge">
+                                <small>CPU UTILIZATION</small>
+                                <strong>42.8%</strong>
+                                <div class="gauge-bar"><i style="width: 42.8%"></i></div>
+                            </div>
+                            <div class="metric-gauge">
+                                <small>MEMORY ALLOCATION</small>
+                                <strong>68.4%</strong>
+                                <div class="gauge-bar"><i style="width: 68.4%"></i></div>
+                            </div>
+                        </div>
+                        <div class="terminal-stream" id="terminalStream">
+                            <!-- Stream lines generated via JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECURITY & COMPLIANCE BADGES -->
+        <section class="compliance-strip">
+            <span class="strip-label">ENTERPRISE COMPLIANCE & ZERO-TRUST CERTIFIED</span>
+            <div class="badge-grid">
+                <div class="comp-badge"><span>🛡️</span> SOC 2 TYPE II</div>
+                <div class="comp-badge"><span>🔒</span> ISO/IEC 27001</div>
+                <div class="comp-badge"><span>⚕️</span> HIPAA COMPLIANT</div>
+                <div class="comp-badge"><span>🇪🇺</span> GDPR & PRIVACY SHIELD</div>
+                <div class="comp-badge"><span>⚡</span> 99.99% FINANCIAL SLA</div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE TELEMETRY & CLUSTER PREVIEW -->
+        <section class="telemetry-section section-pad" id="telemetry">
+            <div class="section-top text-center reveal">
+                <span class="cyber-pill">CLUSTER OPERATIONS</span>
+                <h2>Real-time AI telemetry & inference monitor</h2>
+                <p>Select different model workloads below to observe real-time latency, throughput, and automated autoscaling in action.</p>
+
+                <div class="model-switcher">
+                    <button class="model-tab active" data-model="llm">LLM Gateway (vLLM)</button>
+                    <button class="model-tab" data-model="vision">Vision Neural Pipeline</button>
+                    <button class="model-tab" data-model="timeseries">Time-Series Anomaly Detector</button>
+                </div>
+            </div>
+
+            <div class="telemetry-dashboard reveal">
+                <div class="dash-grid">
+                    <div class="dash-card live-chart-card">
+                        <div class="dash-card-head">
+                            <div>
+                                <h3>Inference Latency & Throughput</h3>
+                                <small id="telemetrySubtitle">Streaming live request telemetry across 16 edge points</small>
+                            </div>
+                            <span class="status-pill-green" id="activeModelPill">LLM Gateway · Active</span>
+                        </div>
+
+                        <div class="telemetry-chart-wrap">
+                            <div class="chart-stats-header">
+                                <div>
+                                    <span class="stat-caption">Average Latency</span>
+                                    <strong id="avgLatencyText">18.4 ms</strong>
+                                </div>
+                                <div>
+                                    <span class="stat-caption">Request Velocity</span>
+                                    <strong id="reqVelocityText">1,480 req/sec</strong>
+                                </div>
+                                <div>
+                                    <span class="stat-caption">Error Rate</span>
+                                    <strong class="text-green" id="errorRateText">0.002%</strong>
+                                </div>
+                            </div>
+
+                            <div class="wave-chart" id="waveChart">
+                                <!-- Dynamic bar waveforms -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dash-card cluster-nodes-card">
+                        <div class="dash-card-head">
+                            <h3>Cluster Edge Nodes</h3>
+                            <button class="refresh-nodes-btn" id="refreshNodesBtn">↻ Refresh</button>
+                        </div>
+                        <div class="nodes-list" id="nodesList">
+                            <!-- Generated via JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAPABILITIES / FEATURES -->
+        <section class="capabilities section-pad" id="features">
+            <div class="section-top text-center reveal">
+                <span class="cyber-pill">CORE ARCHITECTURE</span>
+                <h2>Engineered for zero-latency execution</h2>
+                <p>Four autonomous pillars providing complete cloud governance and observable machine learning execution.</p>
+            </div>
+
+            <div class="capabilities-grid reveal">
+                <article class="cap-card">
+                    <div class="cap-num">01</div>
+                    <div class="cap-icon">⚡</div>
+                    <h3>Autonomous Node Scaling</h3>
+                    <p>Predictive scaling algorithms spin up GPU clusters seconds before traffic spikes arrive, preventing cold-start stalls.</p>
+                    <div class="cap-meta">
+                        <span>Zero Cold Starts</span>
+                        <span>Auto-Heal</span>
+                    </div>
+                </article>
+
+                <article class="cap-card">
+                    <div class="cap-num">02</div>
+                    <div class="cap-icon">🧠</div>
+                    <h3>AI Gateway & Token Guard</h3>
+                    <p>Centralized proxy routing token requests across OpenAI, Anthropic, and private Llama models with automated failover.</p>
+                    <div class="cap-meta">
+                        <span>Smart Routing</span>
+                        <span>Token Caching</span>
+                    </div>
+                </article>
+
+                <article class="cap-card">
+                    <div class="cap-num">03</div>
+                    <div class="cap-icon">🛡️</div>
+                    <h3>Cryptographic Zero-Trust</h3>
+                    <p>Enforce end-to-end mTLS 1.3 encryption across every microservice transaction with automated rotation of ephemeral keys.</p>
+                    <div class="cap-meta">
+                        <span>mTLS 1.3</span>
+                        <span>Ephemeral IAM</span>
+                    </div>
+                </article>
+
+                <article class="cap-card">
+                    <div class="cap-num">04</div>
+                    <div class="cap-icon">📊</div>
+                    <h3>Deep Trace Telemetry</h3>
+                    <p>Distributed tracing correlating user requests, database queries, and neural inference tokens down to the microsecond.</p>
+                    <div class="cap-meta">
+                        <span>Distributed Traces</span>
+                        <span>OpenTelemetry</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE ROI / BANDWIDTH CALCULATOR -->
+        <section class="calculator-section section-pad" id="calculator">
+            <div class="calculator-wrap reveal">
+                <div class="calc-copy">
+                    <span class="cyber-pill">ESTIMATE YOUR IMPACT</span>
+                    <h2>Interactive cloud savings calculator</h2>
+                    <p>
+                        Adjust your monthly API volume and microservice count to see how much
+                        NEXORA's automated caching and autonomous scaling saves your engineering budget.
+                    </p>
+
+                    <div class="calc-slider-group">
+                        <div class="slider-header">
+                            <label for="sliderCalls">Monthly API / Token Invocations</label>
+                            <span class="slider-val" id="valCalls">10 Million</span>
+                        </div>
+                        <input type="range" id="sliderCalls" min="1" max="100" value="10" step="1">
+                    </div>
+
+                    <div class="calc-slider-group">
+                        <div class="slider-header">
+                            <label for="sliderServices">Active Microservices & Endpoints</label>
+                            <span class="slider-val" id="valServices">24 Services</span>
+                        </div>
+                        <input type="range" id="sliderServices" min="5" max="150" value="24" step="1">
+                    </div>
+                </div>
+
+                <div class="calc-result-card">
+                    <div class="result-top">
+                        <span>ESTIMATED ANNUAL RETURN</span>
+                        <div class="big-savings" id="savingsAmount">₹14.2 Lakhs</div>
+                        <small>saved in cloud compute & idle GPU overhead</small>
+                    </div>
+
+                    <div class="savings-breakdown">
+                        <div class="saving-row">
+                            <span>Token Caching Efficiency</span>
+                            <strong id="cacheSavings">38% Savings</strong>
+                        </div>
+                        <div class="saving-row">
+                            <span>Idle Container Elimination</span>
+                            <strong id="idleSavings">₹6.4L Saved</strong>
+                        </div>
+                        <div class="saving-row">
+                            <span>Engineering Hours Reclaimed</span>
+                            <strong id="hoursSavings">420 Hrs / Yr</strong>
+                        </div>
+                    </div>
+
+                    <button class="cyan-btn full-btn" id="calcDeployBtn">Deploy Savings Plan →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING TIERS -->
+        <section class="pricing-section section-pad" id="pricing">
+            <div class="section-top text-center reveal">
+                <span class="cyber-pill">TRANSPARENT SCALE</span>
+                <h2>Predictable enterprise pricing</h2>
+                <p>From fast developer prototypes to sovereign enterprise clusters, choose the tier that fits your scale.</p>
+
+                <div class="pricing-toggle-wrap">
+                    <span class="toggle-text" id="billingMonthLabel">Monthly</span>
+                    <label class="switch" for="pricingToggle">
+                        <input type="checkbox" id="pricingToggle" aria-label="Toggle annual pricing" checked>
+                        <span class="slider-round"></span>
+                    </label>
+                    <span class="toggle-text active" id="billingYearLabel">
+                        Annual Billing <span class="save-tag">20% Off</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="pricing-matrix reveal">
+                <!-- DEVELOPER TIER -->
+                <article class="price-box">
+                    <span class="tier-name">Developer</span>
+                    <p class="tier-desc">For indie hackers and research engineers building proof-of-concept AI pipelines.</p>
+                    <div class="price-figure">
+                        <h2 id="devPrice">₹0</h2>
+                        <span class="cycle-text" id="devCycle">free forever</span>
+                    </div>
+                    <ul class="tier-features">
+                        <li>✓ Up to 100K API inferences / mo</li>
+                        <li>✓ 3 Active cluster endpoints</li>
+                        <li>✓ Shared edge routing</li>
+                        <li>✓ Community Discord support</li>
+                        <li>✓ Standard 99.9% availability</li>
+                    </ul>
+                    <button class="outline-btn tier-btn" data-signup-tier="Developer">Start Developing Free</button>
+                </article>
+
+                <!-- TEAM TIER (POPULAR) -->
+                <article class="price-box featured-box">
+                    <div class="glow-border-pill">MOST ACCELERATED</div>
+                    <span class="tier-name">Team Growth</span>
+                    <p class="tier-desc">For scaling startups and product engineering groups requiring high-velocity throughput.</p>
+                    <div class="price-figure">
+                        <h2 id="teamPrice">₹1,599 <small>/ month</small></h2>
+                        <span class="cycle-text" id="teamCycle">billed annually (save ₹4,800/yr)</span>
+                    </div>
+                    <ul class="tier-features">
+                        <li>✓ Up to 5M API inferences / mo</li>
+                        <li>✓ Dedicated GPU autoscaling nodes</li>
+                        <li>✓ Semantic prompt & token caching</li>
+                        <li>✓ Distributed OpenTelemetry traces</li>
+                        <li>✓ Priority 24/7 Slack & ticket SLA</li>
+                    </ul>
+                    <button class="cyan-btn tier-btn" data-signup-tier="Team Growth">Deploy Team Cluster →</button>
+                </article>
+
+                <!-- ENTERPRISE SCALE -->
+                <article class="price-box">
+                    <span class="tier-name">Enterprise Scale</span>
+                    <p class="tier-desc">For organizations demanding private VPC isolation, custom SLA guarantees, and compliance.</p>
+                    <div class="price-figure">
+                        <h2 id="entPrice">Custom</h2>
+                        <span class="cycle-text" id="entCycle">tailored annual contract</span>
+                    </div>
+                    <ul class="tier-features">
+                        <li>✓ Unlimited API & neural workloads</li>
+                        <li>✓ Dedicated private VPC & GPU enclaves</li>
+                        <li>✓ 99.99% Financial Uptime Guarantee</li>
+                        <li>✓ SAML SSO / Okta / Azure AD integration</li>
+                        <li>✓ Dedicated Solutions Architect (Bengaluru)</li>
+                    </ul>
+                    <button class="outline-btn tier-btn" data-signup-tier="Enterprise Scale">Contact Enterprise Team ↗</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- COMPARISON MATRIX -->
+        <section class="matrix-section section-pad" id="comparison">
+            <div class="section-top text-center reveal">
+                <span class="cyber-pill">SPECIFICATIONS</span>
+                <h2>Architecture & tier comparison</h2>
+                <p>Inspect detailed runtime specifications across all NEXORA cluster tiers.</p>
+            </div>
+
+            <div class="table-scroller reveal">
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Capabilities</th>
+                            <th>Developer</th>
+                            <th class="matrix-highlight">Team Growth</th>
+                            <th>Enterprise Scale</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cat-header"><td colspan="4">RUNTIME & INFERENCE</td></tr>
+                        <tr><td>Monthly Included Requests</td><td>100,000</td><td class="matrix-highlight">5,000,000</td><td>Unlimited Custom Quota</td></tr>
+                        <tr><td>Median Edge Latency</td><td>12 ms</td><td class="matrix-highlight">4.2 ms</td><td>Sub-2 ms Dedicated POPs</td></tr>
+                        <tr><td>Autonomous Cluster Autoscaling</td><td>Standard</td><td class="matrix-highlight">Predictive Neural Scaling</td><td>Sub-Second GPU Provisioning</td></tr>
+                        <tr class="cat-header"><td colspan="4">SECURITY & GOVERNANCE</td></tr>
+                        <tr><td>Zero-Trust mTLS 1.3 Encryption</td><td>✓</td><td class="matrix-highlight">✓</td><td>✓ (Dedicated HSM)</td></tr>
+                        <tr><td>SAML Single Sign-On (SSO)</td><td>—</td><td class="matrix-highlight">—</td><td>✓ (Okta, Azure, Ping)</td></tr>
+                        <tr><td>Audit Log Retention</td><td>7 Days</td><td class="matrix-highlight">90 Days</td><td>7 Years Immutable WORM</td></tr>
+                        <tr class="cat-header"><td colspan="4">SUPPORT & SLA</td></tr>
+                        <tr><td>Uptime Guarantee</td><td>99.9%</td><td class="matrix-highlight">99.95%</td><td>99.99% Financial SLA</td></tr>
+                        <tr><td>Support Channels</td><td>Community & Docs</td><td class="matrix-highlight">24/7 Priority Chat</td><td>Dedicated Solutions Engineer</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ ACCORDION -->
+        <section class="faq-section section-pad" id="faq">
+            <div class="section-top text-center reveal">
+                <span class="cyber-pill">ANSWERS & INTEL</span>
+                <h2>Frequently asked questions</h2>
+                <p>Common architectural and technical inquiries regarding NEXORA 3.0.</p>
+            </div>
+
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>How does NEXORA eliminate GPU cold starts?</span>
+                        <span class="faq-arrow">+</span>
+                    </button>
+                    <div class="faq-pane">
+                        <p>NEXORA uses predictive time-series models analyzing request cadence to pre-warm serverless GPU containers 15–30 seconds before demand thresholds are breached, ensuring 100% warm-state inference.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>Can NEXORA deploy inside our private AWS or GCP VPC?</span>
+                        <span class="faq-arrow">+</span>
+                    </button>
+                    <div class="faq-pane">
+                        <p>Yes. Enterprise Scale tiers include Terraform and Helm automation allowing the entire NEXORA telemetry runtime to execute privately within your existing VPC without egressing sensitive payload tokens.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger" aria-expanded="false">
+                        <span>What protocols and frameworks are natively supported?</span>
+                        <span class="faq-arrow">+</span>
+                    </button>
+                    <div class="faq-pane">
+                        <p>We natively support gRPC, REST, GraphQL, WebSocket streaming, vLLM, HuggingFace TGI, Triton Inference Server, and OpenTelemetry standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- AUTH / DEMO MODAL -->
+    <div class="modal-backdrop" id="authModal" role="dialog" aria-modal="true" aria-labelledby="modalHeading" hidden>
+        <div class="cyber-modal">
+            <button class="modal-exit" id="modalExitBtn" aria-label="Close dialog">✕</button>
+
+            <div class="modal-tabs">
+                <button class="tab-btn active" id="btnTabSignin">Sign In</button>
+                <button class="tab-btn" id="btnTabSignup">Deploy Workspace</button>
+            </div>
+
+            <h2 id="modalHeading">Console Authentication</h2>
+            <p id="modalSubheading">Sign in with your enterprise credentials to access NEXORA.</p>
+
+            <form id="authForm" novalidate>
+                <div class="input-block" id="orgGroup" hidden>
+                    <label for="orgName">Organization / Workspace Name</label>
+                    <input type="text" id="orgName" placeholder="Acme Technologies Ltd.">
+                    <span class="input-error" id="orgError"></span>
+                </div>
+
+                <div class="input-block">
+                    <label for="userEmail">Corporate Email Address</label>
+                    <input type="email" id="userEmail" placeholder="developer@company.com" required>
+                    <span class="input-error" id="emailError"></span>
+                </div>
+
+                <div class="input-block">
+                    <label for="userPassword">Security Token / Password</label>
+                    <input type="password" id="userPassword" placeholder="••••••••••••" required minlength="6">
+                    <span class="input-error" id="passwordError"></span>
+                </div>
+
+                <button type="submit" class="cyan-btn full-btn" id="authSubmitBtn">Authenticate Session ↗</button>
+                <div class="auth-message" id="authMessage" role="status" aria-live="polite"></div>
+            </form>
+
+            <small class="modal-note">Frontend demonstration mode: Credentials persist in your browser session without contacting remote live auth servers.</small>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-wrap">
+            <div class="footer-brand">
+                <a href="#home" class="logo">
+                    <span class="logo-orb"></span>
+                    NEXORA<span>.AI</span>
+                </a>
+                <p>Next-generation autonomous cloud telemetry and AI pipeline infrastructure.</p>
+            </div>
+
+            <div class="footer-links-col">
+                <strong>Platform</strong>
+                <a href="#telemetry">Telemetry Engine</a>
+                <a href="#features">Capabilities</a>
+                <a href="#calculator">ROI Calculator</a>
+                <a href="#pricing">Pricing Plans</a>
+            </div>
+
+            <div class="footer-links-col">
+                <strong>Specifications</strong>
+                <a href="#comparison">Matrix</a>
+                <a href="#faq">FAQ</a>
+                <a href="#home">Architecture Whitepaper</a>
+                <a href="#home">SOC 2 Report</a>
+            </div>
+
+            <div class="footer-links-col">
+                <strong>Enteropia LLP</strong>
+                <a href="#home">Headquarters: Bengaluru</a>
+                <a href="#home">Careers</a>
+                <a href="#home">Zero-Trust Audit</a>
+                <a href="#home">System Status</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>© <span id="currentYear">2026</span> NEXORA by Enteropia LLP. All rights reserved.</span>
+            <span>Enterprise Cloud & AI Intelligence Demonstration</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

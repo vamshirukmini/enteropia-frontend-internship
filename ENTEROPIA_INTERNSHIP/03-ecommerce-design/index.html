@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOIR — Dark luxury lifestyle, bespoke fashion and curated design pieces.">
+  <title>NOIR — Dark Luxury Storefront</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BANNER -->
+  <div class="announcement">
+    <span>COMPLIMENTARY WHITE-GLOVE DELIVERY ON ORDERS OVER ₹2,999</span>
+    <span class="gold-star">✦</span>
+    <span>THE NOIR WINTER EDIT 2026</span>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="header" id="header">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    <a class="logo" href="#home">NOIR<span>.</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#shop">Collection</a>
+      <a href="#collections">Curated Edits</a>
+      <a href="#story">Our Philosophy</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="action-btn" id="searchToggle" aria-label="Toggle search">⌕</button>
+      <button class="action-btn" id="wishlistOpen" aria-label="Open wishlist">
+        ♡ <span class="badge" id="wishlistCount">0</span>
+      </button>
+      <button class="action-btn bag-btn" id="cartOpen" aria-label="Open shopping bag">
+        Bag (<span id="cartCount">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">THE NOIR ARCHIVE — 2026</span>
+        <h1>Less, but<br><em>exceptional.</em></h1>
+        <p>Curated objects of desire. Timeless silhouettes, architectural proportions, and considered details made for everyday connoisseurs.</p>
+        <div class="hero-actions">
+          <a href="#shop" class="gold-button">Explore the Collection <span>↗</span></a>
+          <a href="#story" class="text-link">The Design Ethos ↓</a>
+        </div>
+        <div class="hero-note">01 — OBSIDIAN, GOLD & ARCHITECTURAL PURITY</div>
+      </div>
+
+      <div class="hero-photo reveal">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=85" alt="Dark luxury fashion collection lookbook" loading="eager">
+        <div class="photo-overlay-glass">
+          <span class="overlay-tag">VOL. 04 / NOIR ARCHIVE</span>
+          <strong>A Study in Dark Minimalism</strong>
+          <small>LIMITED PRODUCTION RUN · 2026</small>
+        </div>
+      </div>
+      <div class="hero-vertical-text">OBJECTS OF DESIRE · EST. 2026</div>
+    </section>
+
+    <!-- INTRO / PHILOSOPHY -->
+    <section class="intro section" id="story">
+      <div class="intro-wrap reveal">
+        <span class="eyebrow">A DISCIPLINE OF RESTRAINT</span>
+        <h2>Good design is never<br><em>out of style.</em></h2>
+        <p>
+          NOIR was conceived around a singular principle: buy fewer pieces, demand uncompromising craftsmanship,
+          and cherish them for generations. Every item in our catalog is engineered from high-grade raw materials,
+          sculpted leather, and precision-finished ceramics.
+        </p>
+      </div>
+    </section>
+
+    <!-- CURATED COLLECTIONS -->
+    <section class="section collections" id="collections">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">CURATED SUITES</span>
+          <h2>Explore the <em>edits.</em></h2>
+        </div>
+        <a href="#shop" class="section-link">View all 12 pieces ↗</a>
+      </div>
+
+      <div class="collection-grid reveal">
+        <div class="collection-card" data-category-filter="fashion">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85" alt="Editorial Fashion Collection" loading="lazy">
+          <div class="col-content">
+            <small>SUITE 01</small>
+            <h3>Sartorial Icons ↗</h3>
+            <p>Monochrome wool, tailored blazers and structured coats.</p>
+          </div>
+        </div>
+
+        <div class="collection-card" data-category-filter="living">
+          <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=85" alt="Living and Interior Accents" loading="lazy">
+          <div class="col-content">
+            <small>SUITE 02</small>
+            <h3>Quiet Living ↗</h3>
+            <p>Architectural ceramic vessels, ambient lighting, and objects.</p>
+          </div>
+        </div>
+
+        <div class="collection-card" data-category-filter="accessories">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85" alt="Timepieces and Leather Accessories" loading="lazy">
+          <div class="col-content">
+            <small>SUITE 03</small>
+            <h3>Finishing Touches ↗</h3>
+            <p>Handcrafted full-grain leather, timepieces, and eyewear.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP / PRODUCT CATALOG -->
+    <section class="section shop-section" id="shop">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">THE NOIR CATALOG</span>
+          <h2>Selected <em>pieces.</em></h2>
+        </div>
+        <span class="product-count" id="productCount">12 pieces</span>
+      </div>
+
+      <!-- TOOLBAR & FILTERS -->
+      <div class="toolbar reveal">
+        <div class="search-input-wrap">
+          <span class="search-icon">⌕</span>
+          <input id="productSearch" type="search" placeholder="Search the collection (e.g. blazer, leather, watch)..." aria-label="Search products">
+        </div>
+
+        <div class="filter-controls">
+          <select id="categoryFilter" aria-label="Filter category">
+            <option value="all">All Categories</option>
+            <option value="fashion">Sartorial Fashion</option>
+            <option value="living">Home & Living</option>
+            <option value="accessories">Leather & Accessories</option>
+          </select>
+
+          <select id="sortProducts" aria-label="Sort products">
+            <option value="featured">Curated (Featured)</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="name">Alphabetical (A — Z)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- SKELETON LOADING PLACEHOLDER -->
+      <div class="skeleton-grid" id="skeletonGrid" hidden aria-hidden="true">
+        <div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div>
+        <div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div>
+        <div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div>
+        <div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div>
+      </div>
+
+      <!-- MAIN PRODUCT GRID -->
+      <div class="product-grid" id="productGrid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+      <!-- EMPTY STATE -->
+      <div class="empty-state" id="emptyProducts" hidden>
+        <span class="empty-symbol">⌕</span>
+        <h3>No matching pieces discovered</h3>
+        <p>Adjust your search query or reset filters to view the full catalog.</p>
+        <button class="gold-button" id="clearFilters">Reset All Filters</button>
+      </div>
+    </section>
+
+    <!-- EDITORIAL BANNER -->
+    <section class="story-banner reveal">
+      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1800&q=85" alt="NOIR boutique architectural interior" loading="lazy">
+      <div class="banner-copy">
+        <span class="eyebrow">THE CRAFT OF OBSIDIAN</span>
+        <h2>Keep only what<br><em>endures.</em></h2>
+        <p>Every piece is accompanied by a serialized authenticity certificate and numbered archive stamp.</p>
+        <a href="#shop" class="gold-button">Acquire Selected Pieces ↗</a>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section newsletter reveal">
+      <span class="eyebrow">THE NOIR DISPATCH</span>
+      <h2>Privileged <em>access.</em></h2>
+      <p>Receive private collection unveilings, architectural stories, and limited edition allocations.</p>
+      <form id="newsletterForm" novalidate>
+        <input type="email" id="newsletterEmail" placeholder="Enter your private email address" required>
+        <button type="submit">Subscribe ↗</button>
+      </form>
+      <p class="status" id="newsletterStatus" role="status" aria-live="polite"></p>
+      <small class="dispatch-note">Simulated demonstration: No marketing emails will be dispatched.</small>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <a class="logo" href="#home">NOIR<span>.</span></a>
+        <p class="footer-motto">Dark Luxury. Objects of Desire. Engineered for permanence.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#shop">Collection</a>
+        <a href="#collections">Suites</a>
+        <a href="#story">Philosophy</a>
+        <a href="#home">Care Guide</a>
+      </div>
+      <a href="#home" class="back-top-link">Return to Summit ↑</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="currentYear">2026</span> NOIR Luxury Studio. Developed for the Enteropia Internship Challenge.</span>
+      <span>Frontend Demonstration Mode · No Live Payment Processing Required</span>
+    </div>
+  </footer>
+
+  <!-- PRODUCT DETAILS MODAL -->
+  <div class="overlay" id="productOverlay" role="dialog" aria-modal="true" aria-labelledby="modalProductTitle" hidden>
+    <div class="modal product-modal">
+      <button class="close-button" id="closeProductModal" aria-label="Close product details">✕</button>
+      <div id="productDetailContent">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="overlay drawer-overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-labelledby="drawerCartTitle" hidden>
+    <aside class="drawer">
+      <div class="drawer-head">
+        <h2 id="drawerCartTitle">Your Bag <span id="drawerCartCount">(0)</span></h2>
+        <button class="close-button" id="closeCartDrawer" aria-label="Close bag drawer">✕</button>
+      </div>
+
+      <div id="cartItems" class="drawer-items">
+        <!-- Populated via script.js -->
+      </div>
+
+      <div class="cart-summary" id="cartSummary">
+        <div class="promo-box">
+          <input type="text" id="promoCodeInput" placeholder="Enter promo code (Try NOIR20)">
+          <button id="applyPromoBtn">Apply</button>
+        </div>
+        <div id="promoMessage" class="promo-message"></div>
+
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">₹0</strong>
+        </div>
+        <div class="summary-line" id="discountLine" hidden>
+          <span class="text-gold">Private VIP Discount</span>
+          <strong class="text-gold" id="cartDiscount">-₹0</strong>
+        </div>
+        <div class="summary-line">
+          <span>White-Glove Shipping</span>
+          <strong id="shippingCost">Calculated at checkout</strong>
+        </div>
+        <p class="shipping-note">Complimentary shipping on orders over ₹2,999.</p>
+
+        <button class="gold-button full-button" id="checkoutButton">Proceed to Private Checkout ↗</button>
+        <button class="text-button" id="continueShoppingFromCart">Continue exploring</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- WISHLIST DRAWER -->
+  <div class="overlay drawer-overlay" id="wishlistOverlay" role="dialog" aria-modal="true" aria-labelledby="drawerWishTitle" hidden>
+    <aside class="drawer">
+      <div class="drawer-head">
+        <h2 id="drawerWishTitle">Your Wishlist <span id="drawerWishCount">(0)</span></h2>
+        <button class="close-button" id="closeWishlistDrawer" aria-label="Close wishlist drawer">✕</button>
+      </div>
+      <div id="wishlistItems" class="drawer-items">
+        <!-- Populated via script.js -->
+      </div>
+    </aside>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="overlay" id="checkoutOverlay" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle" hidden>
+    <div class="modal checkout-modal">
+      <button class="close-button" id="closeCheckoutModal" aria-label="Close checkout">✕</button>
+      <span class="eyebrow">NOIR / PRIVATE CHECKOUT</span>
+      <h2 id="checkoutModalTitle">Complete your <em>acquisition.</em></h2>
+
+      <div class="checkout-total">
+        <span>Total Payable (All inclusive)</span>
+        <strong id="checkoutTotal">₹0</strong>
+      </div>
+
+      <form id="checkoutForm" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="chkName">Full Name <span class="req">*</span></label>
+            <input id="chkName" name="name" required minlength="2" placeholder="Vikram Aditya">
+            <span class="chk-error" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="chkEmail">Email Address <span class="req">*</span></label>
+            <input id="chkEmail" name="email" type="email" required placeholder="vikram@exclusive.in">
+            <span class="chk-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="chkPhone">Contact Mobile <span class="req">*</span></label>
+            <input id="chkPhone" name="phone" type="tel" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number">
+            <span class="chk-error" id="phoneError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="chkPin">Delivery PIN Code <span class="req">*</span></label>
+            <input id="chkPin" name="pin" required pattern="[0-9]{6}" maxlength="6" placeholder="6-digit PIN code">
+            <span class="chk-error" id="pinError"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="chkAddress">Delivery Address <span class="req">*</span></label>
+          <textarea id="chkAddress" name="address" required minlength="10" placeholder="Suite, building, street, city and landmark"></textarea>
+          <span class="chk-error" id="addressError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="chkPayment">Settlement Method</label>
+          <select id="chkPayment" name="payment" required>
+            <option value="cod">Cash on White-Glove Delivery (Demo)</option>
+            <option value="upi">Instant UPI (Demo Simulation)</option>
+            <option value="card">Private Black Card / Credit (Demo Simulation)</option>
+          </select>
+        </div>
+
+        <p class="demo-note">Honest demonstration: No real currency or banking credentials will be transmitted.</p>
+        <button class="gold-button full-button" type="submit" id="placeOrderBtn">Confirm Demo Order ↗</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ORDER CONFIRMATION MODAL -->
+  <div class="overlay" id="successOverlay" role="dialog" aria-modal="true" aria-labelledby="orderSuccessTitle" hidden>
+    <div class="modal success-modal">
+      <button class="close-button" id="closeSuccessModal" aria-label="Close order modal">✕</button>
+      <div class="success-mark">✓</div>
+      <span class="eyebrow">ORDER REGISTERED</span>
+      <h2 id="orderSuccessTitle">Thank you for<br><em>choosing NOIR.</em></h2>
+      <p>Your acquisition has been confirmed in our demo store.</p>
+
+      <div class="order-receipt-card">
+        <strong id="orderNumber">NOIR-8492019</strong>
+        <div class="receipt-row"><span>Estimated Dispatch:</span><strong>48 Hours (Express)</strong></div>
+        <div class="receipt-row"><span>Settlement Status:</span><strong>Demo Verified</strong></div>
+      </div>
+
+      <button class="gold-button full-button" id="continueAfterOrder">Return to Collection</button>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

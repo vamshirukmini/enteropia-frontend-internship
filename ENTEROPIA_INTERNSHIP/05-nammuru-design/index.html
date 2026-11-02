@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NAMMURU — Find Your Somewhere</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+ <a class="logo" href="#home">NAMMURU<span>.</span></a>
+ <nav id="nav"><a href="#explore">Explore</a><a href="#places">Places</a><a href="#businesses">Local businesses</a><a href="#events">Events</a></nav>
+ <div class="head-actions"><button id="submitOpen" class="outline-btn">＋ Add a listing</button><button class="menu" id="menu">☰</button></div>
+</header>
+
+<main id="site">
+<section class="hero" id="home">
+ <div class="hero-shade"></div>
+ <div class="hero-content">
+  <span class="eyebrow">A LITTLE CLOSER TO HOME</span>
+  <h1>Find your<br><em>somewhere.</em></h1>
+  <p>Discover the places, people, food and stories that make every corner of our land special.</p>
+  <form id="heroSearch" class="search-box"><span>⌕</span><input id="searchInput" placeholder="Where would you love to go?"><button>Explore ↗</button></form>
+  <div class="hero-tags"><span>Popular:</span><a href="#places" data-search="beach">Beaches</a><a href="#places" data-search="waterfall">Waterfalls</a><a href="#places" data-search="temple">Temples</a></div>
+ </div>
+ <div class="hero-caption"><span>01 / 04</span><span>WESTERN GHATS · KARNATAKA</span></div>
+</section>
+
+<section class="intro section" id="explore">
+ <div><span class="eyebrow">MORE THAN JUST A DESTINATION</span><h2>Discover the beauty<br>of <em>our own backyard.</em></h2></div>
+ <p>From quiet coastal escapes to colourful local markets, find authentic experiences and hidden gems worth sharing.</p>
+</section>
+
+<section class="section places-section" id="places">
+ <div class="section-top"><div><span class="eyebrow">GO A LITTLE FURTHER</span><h2>Places to <em>fall for.</em></h2></div><a href="#allPlaces">Explore all places ↗</a></div>
+ <div class="filter-row">
+  <button class="filter active" data-category="all">All places</button><button class="filter" data-category="beach">Beaches</button><button class="filter" data-category="nature">Nature</button><button class="filter" data-category="heritage">Heritage</button><button class="filter" data-category="waterfall">Waterfalls</button>
+ </div>
+ <div class="places-grid" id="placesGrid"></div>
+ <div class="empty" id="placeEmpty" hidden>No matching places found. Try another search.</div>
+</section>
+
+<section class="feature-story">
+ <div class="story-image"></div>
+ <div class="story-copy"><span class="eyebrow">THE ART OF SLOW TRAVEL</span><h2>Some journeys<br>stay with you<br><em>forever.</em></h2><p>Take the scenic route. Meet the locals. Taste something new. The best memories are often found between the destinations.</p><a href="#events" class="story-link">Find your next experience ↗</a></div>
+</section>
+
+<section class="section business-section" id="businesses">
+ <div class="section-top"><div><span class="eyebrow">SHOP SMALL. EXPERIENCE MORE.</span><h2>Made here.<br><em>Loved everywhere.</em></h2></div><p>Meet the independent cafés, stays, shops and makers that give our towns their character.</p></div>
+ <div class="business-grid" id="businessGrid"></div>
+</section>
+
+<section class="section events-section" id="events">
+ <div class="section-top"><div><span class="eyebrow">MARK YOUR CALENDAR</span><h2>Good things are <em>happening.</em></h2></div><span class="section-note">LOCAL CULTURE · FESTIVALS · EXPERIENCES</span></div>
+ <div class="event-grid" id="eventGrid"></div>
+</section>
+
+<section class="newsletter">
+ <div><span class="eyebrow">A LITTLE INSPIRATION, DELIVERED</span><h2>Keep the good<br><em>places close.</em></h2><p>Get occasional travel inspiration, local stories and new discoveries.</p></div>
+ <form id="newsletter"><input type="email" id="email" placeholder="Your email address" required><button>Count me in ↗</button><small id="newsStatus">No spam. Just good places.</small></form>
+</section>
+<section class="contact section" id="contact"><div><span class="eyebrow">KNOW A PLACE WE SHOULD KNOW?</span><h2>Every great place<br>has a <em>story.</em></h2><p>Help more people discover your favourite local destination or business.</p></div><button class="dark-btn" id="contactSubmit">Share a local gem ↗</button></section>
+</main>
+
+<footer><a class="logo" href="#home">NAMMURU<span>.</span></a><p>Made for curious minds and local hearts.</p><div><a href="#explore">Explore</a><a href="#places">Places</a><a href="#businesses">Businesses</a><a href="#contact">Contact</a></div><small>© 2026 NAMMURU · A frontend discovery concept</small></footer>
+
+<div class="modal" id="listingModal"><div class="modal-card"><button class="close" data-close>×</button><span class="eyebrow">BE PART OF THE DISCOVERY</span><h2>Share a local gem.</h2><p>Tell us about a place, business or event worth discovering.</p>
+<form id="listingForm">
+<label>Your name<input name="name" required placeholder="Your name"></label>
+<label>Listing name<input name="title" required placeholder="Place or business name"></label>
+<label>Listing type<select name="type"><option>Destination</option><option>Local business</option><option>Event / Festival</option></select></label>
+<label>Location<input name="location" required placeholder="Town or district"></label>
+<label>Short description<textarea name="description" required placeholder="What makes it special?"></textarea></label>
+<button class="dark-btn full">Submit listing ↗</button>
+</form></div></div>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

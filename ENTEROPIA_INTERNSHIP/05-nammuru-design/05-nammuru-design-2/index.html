@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OORU helps you discover amazing places, local businesses and events around Karnataka.">
+  <title>OORU — Discover Your Next Local Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="logo" href="#home"><span>O</span>ORU<span class="logo-dot">.</span></a>
+  <nav id="navigation">
+    <a href="#explore">Explore</a>
+    <a href="#places">Places</a>
+    <a href="#businesses">Businesses</a>
+    <a href="#events">Events</a>
+  </nav>
+  <div class="top-actions">
+    <button class="location-button" id="locationButton">⌖ Karnataka</button>
+    <button class="add-button" id="openListing">＋ Add listing</button>
+    <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="eyebrow"><span class="live-dot"></span> YOUR CITY, YOUR STORIES</div>
+      <h1>Find your next<br>favourite <span>place.</span></h1>
+      <p>Discover hidden gems, local favourites and unforgettable experiences around you.</p>
+
+      <form class="search-box" id="searchForm">
+        <span>⌕</span>
+        <input id="searchInput" type="search" placeholder="Search places, cafes, events..." aria-label="Search listings">
+        <button type="submit">Explore →</button>
+      </form>
+
+      <div class="popular-searches">
+        <span>Popular:</span>
+        <button class="quick-search" data-search="beach">Beaches</button>
+        <button class="quick-search" data-search="cafe">Cafes</button>
+        <button class="quick-search" data-search="waterfall">Waterfalls</button>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1100&q=85" alt="Beautiful green landscape in Karnataka">
+        <div class="image-tag">EXPLORE KARNATAKA ↗</div>
+      </div>
+      <div class="floating-note">
+        <span class="note-icon">✦</span>
+        <div><strong>Made for explorers</strong><small>Discover something new today</small></div>
+      </div>
+      <div class="circle-stamp">LOCAL<br>LOVE<br>♡</div>
+    </div>
+  </section>
+
+  <section class="category-section" id="explore">
+    <div class="section-heading">
+      <div><span class="section-kicker">EXPLORE YOUR WAY</span><h2>What are you looking for?</h2></div>
+      <p>Pick a category and let the discovery begin.</p>
+    </div>
+    <div class="category-list" id="categoryList">
+      <button class="category active" data-category="all"><span>✦</span> Everything</button>
+      <button class="category" data-category="nature"><span>🌿</span> Nature</button>
+      <button class="category" data-category="heritage"><span>🏛️</span> Heritage</button>
+      <button class="category" data-category="beach"><span>🌊</span> Beaches</button>
+      <button class="category" data-category="food"><span>☕</span> Food & Cafes</button>
+      <button class="category" data-category="adventure"><span>⛰️</span> Adventure</button>
+    </div>
+  </section>
+
+  <section class="discover-section" id="places">
+    <div class="section-heading">
+      <div><span class="section-kicker">HANDPICKED FOR YOU</span><h2>Places worth the trip<span class="orange">.</span></h2></div>
+      <span class="result-count" id="resultCount">6 places to explore</span>
+    </div>
+
+    <div class="discover-layout">
+      <div class="place-grid" id="placeGrid"></div>
+
+      <aside class="map-panel">
+        <div class="map-top">
+          <div><span class="section-kicker">FIND YOUR WAY</span><h3>Explore the map</h3></div>
+          <span class="map-pin">⌖</span>
+        </div>
+        <div class="map-visual">
+          <div class="map-road road-one"></div>
+          <div class="map-road road-two"></div>
+          <div class="map-road road-three"></div>
+          <div class="map-water"></div>
+          <div class="map-label label-one">KARNATAKA</div>
+          <button class="map-marker marker-one" data-map="Mysuru Palace" aria-label="Mysuru Palace location">●</button>
+          <button class="map-marker marker-two" data-map="Gokarna" aria-label="Gokarna location">●</button>
+          <button class="map-marker marker-three" data-map="Jog Falls" aria-label="Jog Falls location">●</button>
+          <button class="map-marker marker-four" data-map="Hampi" aria-label="Hampi location">●</button>
+          <span class="map-caption">A little adventure is waiting ↗</span>
+        </div>
+        <div class="map-footer"><span>📍 Discover Karnataka</span><span>Map preview</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="business-section" id="businesses">
+    <div class="section-heading">
+      <div><span class="section-kicker">SUPPORT LOCAL</span><h2>Good things happen locally.</h2></div>
+      <a class="text-link" href="#listing">Discover local businesses ↗</a>
+    </div>
+    <div class="business-grid">
+      <article class="business-card">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Cozy local cafe">
+        <div class="business-info"><span class="business-type">CAFÉ & COFFEE</span><h3>Little Bean Café</h3><p>📍 Bengaluru, Karnataka</p><span class="business-status">LOCAL FAVOURITE</span></div>
+      </article>
+      <article class="business-card">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Restaurant interior">
+        <div class="business-info"><span class="business-type">FOOD & DINING</span><h3>The Local Table</h3><p>📍 Mysuru, Karnataka</p><span class="business-status">DISCOVER SOMETHING NEW</span></div>
+      </article>
+      <article class="business-card">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=700&q=80" alt="Independent local store">
+        <div class="business-info"><span class="business-type">SHOPPING</span><h3>Ooru Handmade</h3><p>📍 Mangaluru, Karnataka</p><span class="business-status">MADE WITH LOVE</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="events-section" id="events">
+    <div class="section-heading">
+      <div><span class="section-kicker">DON'T MISS OUT</span><h2>What's happening nearby?</h2></div>
+      <span class="event-note">Make memories, not plans.</span>
+    </div>
+    <div class="event-grid">
+      <article class="event-card">
+        <div class="event-date"><strong>15</strong><span>NOV</span></div>
+        <div><span class="event-category">CULTURE & ART</span><h3>Weekend Art Market</h3><p>📍 Bengaluru · Community event</p></div>
+        <span class="event-arrow">↗</span>
+      </article>
+      <article class="event-card">
+        <div class="event-date green-date"><strong>22</strong><span>NOV</span></div>
+        <div><span class="event-category">FOOD & COMMUNITY</span><h3>Local Food Festival</h3><p>📍 Mysuru · Community event</p></div>
+        <span class="event-arrow">↗</span>
+      </article>
+      <article class="event-card">
+        <div class="event-date purple-date"><strong>29</strong><span>NOV</span></div>
+        <div><span class="event-category">MUSIC & CULTURE</span><h3>Open Air Music Evening</h3><p>📍 Mangaluru · Community event</p></div>
+        <span class="event-arrow">↗</span>
+      </article>
+    </div>
+    <p class="demo-note">Sample event listings for demonstration. Dates and venues are not verified live schedules.</p>
+  </section>
+
+  <section class="community-section" id="listing">
+    <div class="community-copy">
+      <span class="section-kicker">BE PART OF THE STORY</span>
+      <h2>Know a place<br>we should know?</h2>
+      <p>Help people discover the special places, local businesses and experiences that make your town unique.</p>
+      <button class="add-button large-button" id="communityListing">＋ Share your listing</button>
+    </div>
+    <div class="community-art">
+      <div class="community-circle">YOUR<br>PLACE.<br>YOUR<br>STORY.</div>
+      <span class="spark spark-one">✳</span><span class="spark spark-two">✦</span>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <a class="logo footer-logo" href="#home"><span>O</span>ORU<span class="logo-dot">.</span></a>
+  <p>Discover local. Experience more.</p>
+  <div><a href="#explore">Explore</a><a href="#businesses">Businesses</a><a href="#events">Events</a></div>
+  <small>© 2026 OORU. A local discovery concept.</small>
+</footer>
+
+<div class="modal-overlay" id="listingModal">
+  <div class="modal">
+    <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+    <span class="section-kicker">GROW OUR COMMUNITY</span>
+    <h2>Add a listing</h2>
+    <p>Share a place, business or event with the OORU community.</p>
+    <form id="listingForm">
+      <label for="listingName">Name</label>
+      <input id="listingName" required placeholder="Enter a name">
+      <label for="listingType">Listing type</label>
+      <select id="listingType" required>
+        <option value="">Choose a category</option>
+        <option value="place">Place</option>
+        <option value="business">Local business</option>
+        <option value="event">Event</option>
+      </select>
+      <label for="listingLocation">Location</label>
+      <input id="listingLocation" required placeholder="Town or city">
+      <label for="listingDescription">Short description</label>
+      <textarea id="listingDescription" rows="3" placeholder="Tell us what makes it special"></textarea>
+      <button class="submit-button" type="submit">Submit listing →</button>
+    </form>
+    <small class="form-note">Demo only: submissions are stored in this page session, not sent to a server.</small>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>

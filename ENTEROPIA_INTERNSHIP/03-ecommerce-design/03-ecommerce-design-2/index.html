@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ATELIER — Thoughtful objects for a more beautiful everyday. Warm minimalist living and boutique apparel.">
+  <title>ATELIER — The Art of Living</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topline">A LITTLE MORE BEAUTY IN EVERYDAY LIFE <span>✳</span> COMPLIMENTARY SHIPPING OVER ₹2,999 <span>✳</span> NEW SEASON EDIT</div>
+
+  <header class="header" id="header">
+    <button class="menu-btn" id="menuToggle" aria-label="Open navigation menu">☰</button>
+    <a href="#home" class="brand">atelier<span>®</span></a>
+    <nav id="nav">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop All</a>
+      <a href="#categories">Collections</a>
+      <a href="#about">Our Philosophy</a>
+    </nav>
+    <div class="actions">
+      <button id="searchToggle" aria-label="Search collection">⌕</button>
+      <button id="wishlistOpen" aria-label="Open wishlist">♡ <span id="wishCount">0</span></button>
+      <button id="cartOpen" aria-label="Open cart bag">Bag <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <span class="kicker">DESIGNED FOR SLOWER DAYS · VOL. 01</span>
+        <h1>Make room<br>for <em>beautiful.</em></h1>
+        <p>Everyday objects, thoughtfully chosen. Discover pieces that bring warmth, character and a little calm into your living spaces.</p>
+        <a href="#shop" class="primary-btn">Explore the collection <span>↗</span></a>
+        <div class="hero-caption">A MORE CONSIDERED WAY TO LIVE · EST. 2026</div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=85" alt="Warm minimal interior with natural textures" loading="eager">
+        <div class="floating-note">
+          <span>THE NEW EDIT</span>
+          <strong>Simple things.<br>Beautifully made.</strong>
+        </div>
+        <span class="image-index">01 / 04 · LIVING SUITE</span>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <div>LIVE BEAUTIFULLY ✳ CHOOSE THOUGHTFULLY ✳ KEEP WHAT MATTERS ✳ HONEST NATURAL MATERIALS ✳ SLOW LIVING ✳ LIVE BEAUTIFULLY ✳ CHOOSE THOUGHTFULLY ✳</div>
+    </section>
+
+    <section class="section categories" id="categories">
+      <div class="section-title">
+        <div>
+          <span class="kicker">FIND YOUR FAVOURITES</span>
+          <h2>Shop by <em>mood.</em></h2>
+        </div>
+        <p>Little details can change the feeling of a whole day.</p>
+      </div>
+      <div class="category-grid">
+        <a href="#shop" class="category-card tall" data-category="living">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=85" alt="Minimal home interior" loading="lazy">
+          <div>
+            <span>01 / HOME & LIVING</span>
+            <h3>Spaces to love ↗</h3>
+          </div>
+        </a>
+        <a href="#shop" class="category-card" data-category="fashion">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85" alt="Fashion and clothing" loading="lazy">
+          <div>
+            <span>02 / FASHION</span>
+            <h3>Wear your way ↗</h3>
+          </div>
+        </a>
+        <a href="#shop" class="category-card" data-category="accessories">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85" alt="Lifestyle accessories" loading="lazy">
+          <div>
+            <span>03 / ACCESSORIES</span>
+            <h3>Finishing details ↗</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section shop" id="shop">
+      <div class="section-title">
+        <div>
+          <span class="kicker">THE ATELIER SELECTION</span>
+          <h2>Good things, <em>found.</em></h2>
+        </div>
+        <span class="count" id="productCount">12 products</span>
+      </div>
+
+      <div class="filters" id="searchArea">
+        <input id="searchInput" type="search" placeholder="Find something lovely (e.g. linen, lamp, ceramic)..." aria-label="Search products">
+        <select id="categoryFilter" aria-label="Filter category">
+          <option value="all">All Categories</option>
+          <option value="living">Home & Living</option>
+          <option value="fashion">Boutique Fashion</option>
+          <option value="accessories">Curated Accessories</option>
+        </select>
+        <select id="sortFilter" aria-label="Sort products">
+          <option value="featured">Curated (Featured)</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="name">Alphabetical (A to Z)</option>
+        </select>
+      </div>
+
+      <!-- SKELETON LOADER -->
+      <div class="skeleton-grid" id="skeletonGrid" hidden aria-hidden="true">
+        <div class="sk-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div>
+        <div class="sk-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div>
+        <div class="sk-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div>
+        <div class="sk-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div></div>
+      </div>
+
+      <div class="products" id="productGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <h3>Nothing discovered here just yet.</h3>
+        <p>Try refining your search keyword or browse our complete collection.</p>
+        <button class="primary-btn" id="resetFilters">Show all products ↗</button>
+      </div>
+    </section>
+
+    <section class="editorial" id="about">
+      <div class="editorial-image">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1300&q=85" alt="Calm, thoughtfully designed living space" loading="lazy">
+      </div>
+      <div class="editorial-copy">
+        <span class="kicker">OUR PHILOSOPHY</span>
+        <h2>Less noise.<br>More <em>meaning.</em></h2>
+        <p>We believe the things around us should make life feel a little more special. ATELIER brings together considered design, everyday usefulness and timeless simplicity, sourced ethically from local artisans and master woodturners.</p>
+        <a href="#shop" class="under-link">Discover our full catalog ↗</a>
+        <span class="editorial-number">A NOTE ON LIVING WELL — 001</span>
+      </div>
+    </section>
+
+    <section class="section promise">
+      <span class="kicker">THE ATELIER PROMISE</span>
+      <h2>Thoughtful by <em>nature.</em></h2>
+      <div class="promise-grid">
+        <div>
+          <span>01</span>
+          <h3>Considered Choices</h3>
+          <p>Every piece has an intentional place in a slower, more mindful everyday lifestyle.</p>
+        </div>
+        <div>
+          <span>02</span>
+          <h3>Everyday Beauty</h3>
+          <p>Practical items designed with natural timber, unglazed stoneware, and breathable linens.</p>
+        </div>
+        <div>
+          <span>03</span>
+          <h3>Gentle Experiences</h3>
+          <p>Clear transparent checkout, complimentary gift-wrapping, and considerate customer care.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <span class="kicker">LETTERS FROM ATELIER</span>
+      <h2>A little note, <em>now and then.</em></h2>
+      <p>New finds, thoughtful stories and things worth sharing. No spam, ever.</p>
+      <form id="newsletterForm">
+        <input type="email" id="newsletterEmail" placeholder="Your private email address" required>
+        <button type="submit">Join us ↗</button>
+      </form>
+      <div id="newsletterStatus" class="status" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main">
+      <a class="brand" href="#home">atelier<span>®</span></a>
+      <p>Thoughtful objects.<br>Beautiful everyday.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ATELIER Living Studio · Developed for Enteropia LLP Internship Challenge</span>
+      <span>Instagram · Pinterest · Journal</span>
+      <span>Frontend Demonstration Mode · No Live Payment Processing</span>
+    </div>
+  </footer>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div class="overlay" id="detailOverlay" role="dialog" aria-modal="true" aria-labelledby="detailTitle" hidden>
+    <div class="modal detail-modal">
+      <button class="close" id="closeDetailBtn" data-close="detailOverlay" aria-label="Close details">×</button>
+      <div id="detailContent"></div>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <div class="overlay drawer-overlay" id="cartOverlay" role="dialog" aria-modal="true" aria-labelledby="drawerHeadTitle" hidden>
+    <aside class="drawer">
+      <div class="drawer-head">
+        <h2 id="drawerHeadTitle">Your Bag <span id="drawerCount">(0)</span></h2>
+        <button class="close" id="closeCartBtn" data-close="cartOverlay" aria-label="Close cart">×</button>
+      </div>
+
+      <div class="drawer-items" id="cartItems"></div>
+
+      <div class="drawer-summary" id="cartSummary">
+        <div class="promo-box">
+          <input type="text" id="promoInput" placeholder="Promo code (Try ATELIER15)">
+          <button id="promoBtn">Apply</button>
+        </div>
+        <div id="promoMsg" class="promo-msg"></div>
+
+        <div class="sum-row">
+          <span>Subtotal</span>
+          <strong id="subtotal">₹0</strong>
+        </div>
+        <div class="sum-row" id="discountRow" hidden>
+          <span class="text-terracotta">Seasonal Savings</span>
+          <strong class="text-terracotta" id="discountAmt">-₹0</strong>
+        </div>
+        <div class="sum-row">
+          <span>Shipping</span>
+          <strong id="shipping">Calculated at checkout</strong>
+        </div>
+        <p class="shipping-note">Complimentary shipping on orders over ₹2,999.</p>
+
+        <button class="primary-btn full" id="checkoutBtn">Continue to checkout ↗</button>
+        <button class="plain-btn" data-close="cartOverlay">Keep browsing pieces</button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- WISHLIST DRAWER -->
+  <div class="overlay drawer-overlay" id="wishlistOverlay" role="dialog" aria-modal="true" aria-labelledby="drawerWishTitle" hidden>
+    <aside class="drawer">
+      <div class="drawer-head">
+        <h2 id="drawerWishTitle">Saved Pieces <span id="drawerWishCount">(0)</span></h2>
+        <button class="close" id="closeWishlistBtn" data-close="wishlistOverlay" aria-label="Close wishlist">×</button>
+      </div>
+      <div class="drawer-items" id="wishlistItems"></div>
+    </aside>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="overlay" id="checkoutOverlay" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle" hidden>
+    <div class="modal checkout-modal">
+      <button class="close" id="closeCheckoutBtn" data-close="checkoutOverlay" aria-label="Close checkout">×</button>
+      <span class="kicker">ATELIER / CHECKOUT</span>
+      <h2 id="checkoutTitle">Almost <em>yours.</em></h2>
+      <div class="checkout-total">
+        <span>Order Total (All inclusive)</span>
+        <strong id="checkoutTotal">₹0</strong>
+      </div>
+      <form id="checkoutForm" novalidate>
+        <div class="form-grid">
+          <div class="field-wrap">
+            <label for="chkName">Full Name <span class="req">*</span></label>
+            <input id="chkName" name="name" required minlength="2" placeholder="Ananya Sharma">
+            <span class="field-err" id="chkNameErr"></span>
+          </div>
+          <div class="field-wrap">
+            <label for="chkEmail">Email Address <span class="req">*</span></label>
+            <input id="chkEmail" name="email" type="email" required placeholder="ananya@example.com">
+            <span class="field-err" id="chkEmailErr"></span>
+          </div>
+          <div class="field-wrap">
+            <label for="chkPhone">Mobile Number <span class="req">*</span></label>
+            <input id="chkPhone" name="phone" type="tel" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit number">
+            <span class="field-err" id="chkPhoneErr"></span>
+          </div>
+          <div class="field-wrap">
+            <label for="chkPin">PIN Code <span class="req">*</span></label>
+            <input id="chkPin" name="pin" required pattern="[0-9]{6}" maxlength="6" placeholder="6-digit PIN code">
+            <span class="field-err" id="chkPinErr"></span>
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label for="chkAddress">Delivery Address <span class="req">*</span></label>
+          <textarea id="chkAddress" name="address" required minlength="10" placeholder="House, flat, street, city and state"></textarea>
+          <span class="field-err" id="chkAddressErr"></span>
+        </div>
+
+        <div class="field-wrap">
+          <label for="chkPayment">Payment Method</label>
+          <select id="chkPayment" name="payment" required>
+            <option value="cod">Cash on Delivery (Demo Verification)</option>
+            <option value="upi">Direct UPI (Demo Simulation)</option>
+            <option value="card">Debit / Credit Card (Demo Simulation)</option>
+          </select>
+        </div>
+
+        <p class="demo-note">Demonstration Store: No actual payment will be debited or bank details requested.</p>
+        <button type="submit" class="primary-btn full" id="placeOrderBtn">Confirm Demo Order ↗</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SUCCESS MODAL -->
+  <div class="overlay" id="successOverlay" role="dialog" aria-modal="true" aria-labelledby="successTitle" hidden>
+    <div class="modal success-modal">
+      <button class="close" id="closeSuccessBtn" data-close="successOverlay" aria-label="Close confirmation">×</button>
+      <div class="success-icon">✓</div>
+      <span class="kicker">A DELIGHTFUL ACQUISITION</span>
+      <h2 id="successTitle">Thank you for<br><em>shopping with us.</em></h2>
+      <p>Your demo order was received and logged successfully.</p>
+      <div class="order-ref-card">
+        <strong id="orderNumber">ORDER REFERENCE: ATL-9482103</strong>
+        <p>Estimated dispatch: 24 to 48 hours</p>
+      </div>
+      <button class="primary-btn full" id="continueShopping">Back to ATELIER ↗</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
